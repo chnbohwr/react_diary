@@ -1,46 +1,95 @@
 @import 'variable';
+@card_background: white;
 .diaryListItem{
     font-family: Microsoft JhengHei;
     margin: 0 10px 10px 10px;
-    height: 100px;
+    height: 90px;
     background: rgba(255,255,255,@global_opacity);
     color: @base_color;
     border-radius: 5px;
     position: relative;
+    background-color: @card_background;
     &:first-child{
         margin-top: 10px;
     }
-    .left_content{
+    .left_content, .center_content, .right_content{
         position: absolute;
+        height: 100%;
+        box-sizing: border-box;
+    }
+    .left_content{
         top: 0;
         left: 0;
-        height: 100px;
         width: 70px;
         text-align: center;
+        padding: 10px 0;
+        height: 100%;
         .date{
             font-size: 50px;
-            padding: 5px;
-            line-height: 60px;
-            height: 60px;
+            line-height: 50px;
+            height: 50px;
         }
         .day{
+            padding-top: 5px;
             font-size: 12px;
-            height: 30px;
+            height: 20px;
         }
     }
     .center_content{
-        position: absolute;
         top: 0;
         left: 70px;
         right: 80px;
         bottom: 0;
+        padding: 15px 5px;
+        .time{
+            font-size: 10px;
+            margin-bottom: 3px;
+        }
+        .title{
+            font-size: 20px;
+        }
+        .description{
+            font-size: 10px;
+            margin-top: 5px;
+        }
+
+        .time, .title, .description{
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
     .right_content{
-        position: absolute;
         width: 80px;
-        height: 100%;
         top: 0;
         right: 0;
+        padding: 15px 10px 0 0;
+        button{
+            box-sizing: content-box;
+            border: none;
+            padding: 0;
+            background-color: @card_background;
+            color: @base_color;
+        }
+        .add_attachment{
+            button{
+                width: 20px;
+                margin-right: 5px;
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+        .has_attachment{
+            font-size: 30px;
+            float: right;
+            margin-top: 5px;
+            .attachment_button{
+                i{
+                    transform: rotate(75deg);
+                }
+            }
+        }
     }
-
 }

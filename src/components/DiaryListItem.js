@@ -20,17 +20,25 @@ class DiaryListItem extends React.Component {
                         東京生活3
                     </div>
                     <div className="description">
-                        跟前輩去吃飯的時候遇到不好的客人
+                        今天打工遇到不好的客人畫破前輩的衣服，後來我去幫前輩縫好了
                     </div>
                 </div>
                 <div className="right_content">
                     <div className="add_attachment">
-                        <i className="fa fa-camera" aria-hidden="true"></i>
-                        <i className="fa fa-file-o" aria-hidden="true"></i>
-                        <i className="fa fa-film" aria-hidden="true"></i>
+                        <button className="camera_button">
+                            <i className="fa fa-camera" aria-hidden="true"></i>
+                        </button>
+                        <button className="file_button">
+                            <i className="fa fa-file-o" aria-hidden="true"></i>
+                        </button>
+                        <button className="film_button">
+                            <i className="fa fa-film" aria-hidden="true"></i>
+                        </button>
                     </div>
                     <div className="has_attachment">
-                        <i className="fa fa-paperclip" aria-hidden="true"></i>
+                        <button className="attachment_button">
+                            <i className="fa fa-paperclip" aria-hidden="true"></i>
+                        </button>
                     </div>
                 </div>
             </div>

@@ -6,6 +6,15 @@ class Content extends React.Component {
     return (
         <div className="content">
             <DiaryListItem />
+            <DiaryListItem />
+            <DiaryListItem />
+            <DiaryListItem />
+            <DiaryListItem />
+            <DiaryListItem />
+            <DiaryListItem />
+            <DiaryListItem />
+            <DiaryListItem />
+            <DiaryListItem />
         </div>
     );
   }
